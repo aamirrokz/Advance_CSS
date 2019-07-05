@@ -1,3 +1,10 @@
+/* 
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485 
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +22,8 @@ body {
   height: 95vh;
   background-image: linear-gradient(
       to top,
-      rgba(168, 255, 120, 0.8),
-      rgba(120, 255, 214, 0.8)
+      rgba(40, 180, 133, 0.8),
+      rgba(126, 213, 111, 0.8)
     ),
     url("https://uploads.codesandbox.io/uploads/user/41054572-3478-48a4-95e6-f86bf669d41f/edTn-hero-small.jpg");
   background-size: cover;
@@ -40,12 +47,14 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .header-primary {
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .header-primary-main {
@@ -94,4 +103,67 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white:after {
+  background-color: white;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveUp 0.5s ease-out 0.75s backwards;
 }
