@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aamirrokz/Advance_CSS.git"
+  },
+  "author": "Aamir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aamirrokz/Advance_CSS/issues"
+  },
+  "homepage": "https://github.com/aamirrokz/Advance_CSS#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
